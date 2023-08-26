@@ -2,33 +2,7 @@
 <html>
 <head>
   <style>
-    h1 {
-      color: black;
-      text-align: center;
-      text-shadow: 4px 4px 6px gray;
-      font-size: 50px;
-    }
-
-    .image-upload-wrap {
-      width: 100%;
-      border: 4px dashed #d8d8d8;
-      background-color: #f8f8f8;
-      border-radius: 8px;
-      position: relative;
-      transition: background 0.3s ease-in-out;
-      cursor: pointer;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .file-upload-image {
-      max-width: 100%;
-      max-height: 400px;
-      margin: auto;
-      display: block;
-    }
-
-     /* 외부 폰트 적용 */
+    /* 외부 폰트 적용 */
     @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 
     /* 전체 폼 및 폰트 설정 */
@@ -160,7 +134,9 @@
     </div>
   </div>
   <button type="button" id="predict-button" onclick="predict()">예측</button>
-  <div id="label-container"></div>
+  <div id="label-container" class="result-box">
+    당신과 닮은 스포츠 선수는???
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
