@@ -214,7 +214,7 @@
 
         const maxClassLabel = prediction[maxIndex].className;
 
-        labelContainer.innerHTML = `Predicted Class: ${maxClassLabel} (Probability: ${maxProbability.toFixed(2)})`;
+       labelContainer.innerHTML = `${maxProbability.toFixed(2) * 100}% ${maxClassLabel} 선수와 닮았습니다!`;
 
         predictButton.innerHTML = '예측';
       });
