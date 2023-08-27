@@ -108,5 +108,5 @@ function makeGray(originalImage, grayImage) {
 }
 
 $(function() {
-  inti();
+init();
 });

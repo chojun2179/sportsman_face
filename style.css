@@ -1,109 +1,122 @@
- /* 외부 폰트 적용 */
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+/* 외부 폰트 적용 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 
-    /* 전체 폼 및 폰트 설정 */
-    body {
-      font-family: "Noto Sans KR", sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
+/* 전체 폼 및 폰트 설정 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
 
-    /* 제목 */
-    h1 {
-      color: #333;
-      text-align: center;
-      padding: 30px 0;
-    }
+/* 제목 */
+h1 {
+  color: #333;
+  text-align: center;
+  padding: 30px 0;
+}
 
-    /* 버튼 */
-    button {
-      display: block;
-      width: 200px;
-      margin: 20px auto;
-      color: #fff;
-      background-color: #0079FF;
-      border: none;
-      padding: 10px;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-    }
+/* 버튼 */
+button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  color: #fff;
+  background-color: #0079FF;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
 
-    button:hover {
-      background-color: #005ead;
-    }
+button:hover {
+  background-color: #005ead;
+}
 
-    /* 이미지 업로드 영역 */
-    .image-upload {
-      text-align: center;
-      margin-top: 20px;
-    }
+/* 이미지 업로드 영역 */
+.image-upload {
+  text-align: center;
+  margin-top: 20px;
+}
 
-    .file-upload-btn {
-      background-color: #0079FF;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+.file-upload-btn {
+  background-color: #0079FF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    .image-upload-wrap {
-      margin: 20px auto;
-      border: 4px dashed #0079FF;
-      position: relative;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-top: 10px;
-      width: 65%;
-    }
+.image-upload-wrap {
+  margin: 20px auto;
+  border: 4px dashed #0079FF;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+  width: 65%;
+}
 
-    .drag-text {
-      text-align: center;
-    }
+.file-upload-image {
+  max-width: 100%;
+  max-height: 400px;
+  margin: auto;
+  display: block;
+}
 
-    .file-upload-image {
-      max-width: 100%;
-      max-height: 400px;
-      margin: auto;
-      display: block;
-    }
+.file-upload-content {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
 
-    .file-upload-content {
-      display: none;
-      text-align: center;
-      margin-top: 10px;
-    }
+.image-title-wrap {
+  padding: 0 15px;
+  text-align: center;
+}
 
-    .image-title-wrap {
-      padding: 0 15px;
-      text-align: center;
-    }
+.remove-image {
+  width: 150px;
+  margin: 0, auto;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  border-radius: 4px;
+}
 
-    .remove-image {
-      width: 150px;
-      margin: 0, auto;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #333;
-      border-radius: 4px;
-    }
+.remove-image:hover {
+  background: #e0e0e0;
+}
 
-    .remove-image:hover {
-      background: #e0e0e0;
-    }
+/* 결과 박스 스타일 */
+.result-box {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width : 45%;
+  font-size: 20px;
+}
+.nav-distance{
+  padding: 2.1% 7.7%;
+}
+.navbar-toggler{
+  border-color: #ffffff;
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+html {
+font-size: 10px;
+}
+.navbar-brand{
+  font-size: 2rem;
+}
 
-    /* 결과 박스 스타일 */
-    .result-box {
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      width : 45%;
-      font-size: 20px;
-    }
+
+}
