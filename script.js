@@ -107,6 +107,6 @@ function makeGray(originalImage, grayImage) {
   grayImage.src = canvas.toDataURL();
 }
 
-// $(function() {
-
-// });
+$(function() {
+  inti();
+});
