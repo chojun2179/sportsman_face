@@ -1,3 +1,5 @@
+let isImageUploaded = false;
+
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -12,11 +14,12 @@ function readURL(input) {
     };
 
     reader.readAsDataURL(input.files[0]);
+    isImageUploaded = true;
   } else {
     removeUpload();
+    isImageUploaded = false;
   }
 }
-
 
 function removeUpload() {
   $('.file-upload-input').replaceWith($('.file-upload-input').clone());
@@ -28,9 +31,12 @@ const URL = 'https://teachablemachine.withgoogle.com/models/HsPtWtP0z/';
 let model, labelContainer, maxPredictions;
 
 async function init() {
-  const startButton = document.getElementById('start-button');
-  startButton.disabled = true;
-  startButton.innerHTML = 'Loading...';
+  // const startButton = document.getElementById('start-button');
+  // startButton.disabled = true;
+  // startButton.innerHTML = 'Loading...';
+  const predictButton = document.getElementById("predict-button");
+  predictButton.disabled = true;
+  predictButton.innerHTML = '예측 모델 불러오는 중';
 
   const modelURL = URL + 'model.json';
   const metadataURL = URL + 'metadata.json';
@@ -43,15 +49,22 @@ async function init() {
     for (let i = 0; i < maxPredictions; i++) {
       labelContainer.appendChild(document.createElement('div'));
     }
-
-    startButton.style.display = 'none';
+    
+    predictButton.disabled = false;
+    predictButton.innerHTML = '예측하기';
+    // startButton.style.display = 'none';
   } catch (error) {
     console.error('Error loading model:', error);
-    startButton.innerHTML = 'Failed';
+    // startButton.innerHTML = 'Failed';
   }
 }
 
 function predict() {
+  if (!isImageUploaded) {
+    alert("이미지를 먼저 업로드해주세요.");
+    return;
+  }
+
   const predictButton = document.getElementById('predict-button');
   predictButton.innerHTML = 'Predicting...';
 

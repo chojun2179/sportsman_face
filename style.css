@@ -1,7 +1,5 @@
-/* 외부 폰트 적용 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
 
-/* 전체 폼 및 폰트 설정 */
 body {
   font-family: "Noto Sans KR", sans-serif;
   background-color: #ffffff;
@@ -9,14 +7,17 @@ body {
   padding: 0;
 }
 
-/* 제목 */
 h1 {
   color: #333;
   text-align: center;
-  padding: 30px 0;
+  padding-bottom: 20px 0;
+  font-size: 2rem;
 }
 
-/* 버튼 */
+.help-content {
+  padding: 0 7.7%;
+}
+
 button {
   display: block;
   width: 200px;
@@ -34,7 +35,6 @@ button:hover {
   background-color: #005ead;
 }
 
-/* 이미지 업로드 영역 */
 .image-upload {
   text-align: center;
   margin-top: 20px;
@@ -56,12 +56,15 @@ button:hover {
   border-radius: 4px;
   overflow: hidden;
   margin-top: 10px;
-  width: 65%;
+  width: 45%;
+  height: 40%;
 }
 
 .file-upload-image {
-  max-width: 100%;
-  max-height: 400px;
+  max-width: calc(20vw - 20px);
+  max-height: calc(20vw - 20px);
+  /* max-width: 100%; */
+  /* max-height: 400px; */
   margin: auto;
   display: block;
 }
@@ -93,7 +96,6 @@ button:hover {
   background: #e0e0e0;
 }
 
-/* 결과 박스 스타일 */
 .result-box {
   margin: 20px auto;
   padding: 20px;
@@ -109,6 +111,8 @@ button:hover {
 .navbar-toggler{
   border-color: #ffffff;
 }
+
+
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
 html {
@@ -117,6 +121,5 @@ font-size: 10px;
 .navbar-brand{
   font-size: 2rem;
 }
-
 
 }
