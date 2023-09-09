@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>에측 결과</title>
+        <style>
+            .result-box {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width : 45%;
+            font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="result-container" class="result-box">
+            당신과 닮은 스포츠 선수는???
+        </div>
+        <img id="result-image" src="" alt="결과 이미지" style="max-width: 100%; height: auto; display: none;">
+
+        <script type="module">
+            import { displayResult } from './result.js';
+            
+            // 결과 표시 함수 호출
+            displayResult();
+        </script>
+    </body>
+</html>

@@ -83,14 +83,18 @@ function predict() {
       }
 
       const maxClassLabel = prediction[maxIndex].className;
+      const probabilityPercentage = maxProbability.toFixed(2) * 100;
 
-      labelContainer.innerHTML = `${(maxProbability).toFixed(2)*100}% ${maxClassLabel} 선수와 닮았습니다!`;
+      labelContainer.innerHTML = `${probabilityPercentage}% ${maxClassLabel} 선수와 닮았습니다!`;
 
       $('.result-box').slideUp(500, function() {
         setTimeout(function() {
           $('.result-box').slideDown(500);
         }, 500);
       }); 
+      
+      const resultPageUrl = `result.html?result=${maxClassLabel}&probability=${probabilityPercentage}`;
+      window.open(resultPageUrl, '_blank');
 
       predictButton.innerHTML = '예측 완료';
     });
