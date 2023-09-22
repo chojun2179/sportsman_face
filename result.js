@@ -26,8 +26,8 @@ function displayResult() {
             "김재덕_양궁": "images/11.jpg",
             "오진혁_양궁": "images/12.jpg",
 
-            "박지성_축구": "images/13.jpg",
-            "손흥민_축구": "images/14.jpg",
+            "박지성_축구": "images/14.jpg",
+            "손흥민_축구": "images/13.jpg",
             "이강인_축구": "images/15.jpg",
         };
     
