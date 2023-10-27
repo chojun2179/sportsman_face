@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>
+        선수상 테스터
+    </title>  
+  </head>
+
+  
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body nav-distance">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">선수상 테스트</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="model.html">Tester</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="introduce.html">Introduce</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="help.html">Help</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true"></a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="section">
+  <h1 class="title">나와 닮은 운동선수 찾기</h1>
+</section>
+    <!-- <button type="button" id="start-button" onclick="init()">예측 모델 불러오기</button> -->
+    
+    <div class="file-upload">
+      <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger('click')">사진 추가</button>
+      <div class="image-upload-wrap">
+        <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*" />
+      </div>
+      <div class="file-upload-content">
+        <img class="file-upload-image" id="face-image" src="#" alt="사진" />
+        <div class="image-title-wrap">
+          <button type="button" onclick="removeUpload()" class="remove-image">삭제 <span class="image-title">업로드된 사진</span></button>
+        </div>
+      </div>
+    </div> 
+
+
+    <button type="button" id="predict-button" onclick="predict()">예측</button>
+    <div id="label-container" class="result-box">
+      당신과 닮은 스포츠 선수는???
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+    <script src="script.js"></script>
+    
+  </body>
+</html>

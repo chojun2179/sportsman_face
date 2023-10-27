@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>에측 결과</title>
+        <style>
+            /* 결과 상자 스타일 */
+            .result-box {
+                margin: 20px auto; /* 수평 가운데 정렬 */
+                padding: 20px; /* 내부 여백 설정 */
+                background-color: #fff; /* 배경색을 흰색으로 설정 */
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+                text-align: center; /* 텍스트 가운데 정렬 */
+                width: 45%; /* 결과 상자의 너비를 45%로 설정 */
+                font-size: 20px; /* 글꼴 크기를 20px로 설정 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="result-container" class="result-box">
+            당신과 닮은 스포츠 선수는???
+        </div>
+        <img id="result-image" src="" alt="결과 이미지" style="max-width: 100%; height: auto; display: none;">
+
+        <script type="module">
+            import { displayResult } from './result.js';
+            
+            // 결과 표시 함수 호출
+            displayResult();
+        </script>
+    </body>
+</html>
